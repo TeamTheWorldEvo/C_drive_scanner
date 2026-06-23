@@ -10,13 +10,11 @@
 
 ## excel导出示例
 
-![](C:\Users\tan.jx\AppData\Roaming\marktext\images\2026-06-23-09-58-48-image.png)
+<img title="C盘可清理/迁移文件详细清单" src="docs\images\2026-06-23-09-58-25-image.png" alt="" data-align="inline">
 
-![](C:\Users\tan.jx\AppData\Roaming\marktext\images\2026-06-23-09-58-25-image.png)
+![](docs\images\2026-06-23-09-59-01-image.png "C盘清理操作指南")
 
-![](C:\Users\tan.jx\AppData\Roaming\marktext\images\2026-06-23-09-59-01-image.png)
-
-
+![](docs\images\2026-06-23-09-58-48-image.png "C盘清理分析报告")
 
 ---
 
