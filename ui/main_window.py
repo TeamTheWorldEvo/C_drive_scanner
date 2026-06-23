@@ -33,6 +33,9 @@ class MainWindow(ttk.Frame):
         self.pack(fill="both", expand=True)
 
     def _build_ui(self):
+        # --- Menu Bar ---
+        self._build_menu()
+
         # Title label
         title_frame = ttk.Frame(self)
         title_frame.pack(fill="x", padx=10, pady=(10, 0))
@@ -81,6 +84,39 @@ class MainWindow(ttk.Frame):
             style="Status.TLabel"
         )
         self.lbl_summary.pack(side="right")
+
+    def _build_menu(self):
+        """Create the menu bar."""
+        menubar = tk.Menu(self.root)
+        self.root.config(menu=menubar)
+
+        # Help menu
+        help_menu = tk.Menu(menubar, tearoff=0)
+        menubar.add_cascade(label="帮助", menu=help_menu)
+        help_menu.add_command(label="关于...", command=self._show_about)
+
+    def _show_about(self):
+        """Show the About dialog with disclaimer, contact, and GitHub link."""
+        about_text = (
+            "C盘清理分析工具 v1.0\n\n"
+            "══════════ 免责声明 ══════════\n"
+            "本工具仅供系统空间分析使用，仅提供扫描检测\n"
+            "与Excel报告生成功能。本工具不会执行任何实\n"
+            "际的文件删除或迁移操作。\n\n"
+            "用户在使用本工具生成的报告进行任何文件操作\n"
+            "（包括但不限于删除、移动、修改文件）时，所\n"
+            "产生的一切后果由用户自行承担。开发者不对因\n"
+            "使用本工具或根据报告建议操作所造成的任何数\n"
+            "据丢失、系统故障或其他损失承担责任。\n\n"
+            "请务必在操作前备份重要数据！\n\n"
+            "════════ 联系方式 ════════\n"
+            "📧 Email: the_world_evo@163.com\n"
+            "🔗 GitHub: https://github.com/TeamTheWorldEvo/\n"
+            "           C_drive_scanner.git\n\n"
+            "════════ 开源协议 ════════\n"
+            "本项目采用Apache-2.0许可证开源\n"
+        )
+        messagebox.showinfo("关于 C盘清理分析工具", about_text)
 
         # Bind custom events
         self.scan_panel.bind("<<ScanComplete>>", self._on_scan_complete)

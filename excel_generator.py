@@ -210,6 +210,28 @@ class ExcelReportGenerator:
             ws[f"A{row}"].value = tip
             ws.row_dimensions[row].height = 22
 
+        # Disclaimer section
+        row += 2
+        cls._apply_style(
+            ws.cell(row=row, column=1, value="免责声明与联系方式"),
+            Font(name="微软雅黑", size=12, bold=True, color="2F5496"),
+            PatternFill(start_color="D6E4F0", end_color="D6E4F0", fill_type="solid"),
+            cls.LEFT
+        )
+        ws.merge_cells(f"A{row}:G{row}")
+
+        disclaimer_lines = [
+            "免责声明：本工具仅供系统空间分析使用，仅提供扫描检测与Excel报告生成功能，不会执行任何实际的文件删除或迁移操作。",
+            "用户根据本报告进行任何文件操作所产生的后果由用户自行承担。操作前请务必备份重要数据！",
+            "联系方式：the_world_evo@163.com  |  GitHub: https://github.com/TeamTheWorldEvo/C_drive_scanner.git",
+        ]
+        for line in disclaimer_lines:
+            row += 1
+            ws.merge_cells(f"A{row}:G{row}")
+            cls._apply_style(ws[f"A{row}"], cls.NORMAL_FONT, alignment=cls.LEFT)
+            ws[f"A{row}"].value = line
+            ws.row_dimensions[row].height = 22
+
         # Column widths
         widths = [18, 14, 14, 40, 14, 10, 14]
         for i, w in enumerate(widths):

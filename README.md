@@ -8,6 +8,23 @@
 
 **⚠️ 重要：本工具只做扫描分析，不会执行任何实际的删除或迁移操作！**
 
+## 免责声明
+
+本工具仅供系统空间分析使用，仅提供扫描检测与Excel报告生成功能。本工具不会执行任何实际的文件删除或迁移操作。
+
+用户在使用本工具生成的报告进行任何文件操作（包括但不限于删除、移动、修改文件）时，所产生的一切后果由用户自行承担。开发者不对因使用本工具或根据报告建议操作所造成的任何数据丢失、系统故障或其他损失承担责任。
+
+**请务必在操作前备份重要数据！**
+
+## 联系方式
+
+- 📧 Email: **the_world_evo@163.com**
+- 🔗 GitHub: **[https://github.com/TeamTheWorldEvo/C_drive_scanner](https://github.com/TeamTheWorldEvo/C_drive_scanner.git)**
+
+## 开源协议
+
+本项目采用 [Apache-2.0 License](LICENSE) 开源。
+
 ## excel导出示例
 
 <img title="C盘可清理/迁移文件详细清单" src="docs\images\2026-06-23-09-58-25-image.png" alt="" data-align="inline">
